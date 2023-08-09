@@ -1,0 +1,166 @@
+body {
+    font-family: 'Cairo', sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    font-family: 'Cardo', serif;
+}
+
+.navLink {
+    font-family: 'Lumanosimo', cursive !important;
+}
+
+.primary-btn {
+    box-shadow: none !important;
+    transition: all 0.3s ease-in-out;
+}
+
+.nav-bar {
+    z-index: 100 !important;
+}
+
+/* Header */
+.navLink.active,
+.navLink:hover,
+.navLink:focus {
+    color: #74322c !important;
+    border-color: #74322c;
+    text-shadow: 4px #74322c;
+}
+
+.navLink {
+    color: white;
+    border-bottom: 2px solid transparent;
+    transition: all 0.3s ease-in-out;
+}
+
+.search-drawer {
+    height: 100px !important;
+}
+
+.search-close {
+    position: absolute !important;
+    right: 5px !important;
+    top: 5px !important;
+}
+
+.icons-button {
+    left: 45% !important;
+}
+
+.language-icon {
+    filter: invert(100%);
+}
+
+.language:hover img {
+    filter: invert(24%) sepia(6%) saturate(7048%) hue-rotate(321deg) brightness(87%) contrast(88%);
+}
+.custom-prev-arrow,
+.custom-next-arrow {
+  position: absolute;
+  transform: translateY(-50%);
+  cursor: pointer;
+  top: -30% !important;
+}
+
+
+/* _____________________________________ */
+/* Home */
+
+/* Hero */
+.hero-section {
+    background-image: url(/src/assets/images/bg_1.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center right;
+    height: 100vh;
+    background-attachment: fixed;
+}
+
+
+/* Features */
+.feature_icon {
+    filter: invert(79%) sepia(58%) saturate(854%) hue-rotate(288deg) brightness(93%) contrast(96%);
+}
+
+
+/* Work Section */
+.work-section {
+    background-image: url(/src/assets/images/work-bg.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    height: auto;
+}
+
+.work-item img {
+    filter: invert(100%);
+}
+
+/* Shop */
+
+.shop-banner{
+    background-image: url(/src/assets/images/shop-banner.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center right;
+    height: 80vh !important;
+    width: 100%;
+}
+.shop-banner::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100% !important;
+    /* background-color: rgba(75, 73, 74, 0.8); */
+    background-color: rgba(15, 15, 15, 0.7);
+    pointer-events: none;
+}
+
+/* Contact */
+
+/* .contact-page{
+    background-image: url(../images/bg_2.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center right;
+    width: 100%;
+} */
+
+/* Footer */
+
+
+@media screen and (max-width: 600px) {
+    .icons-button {
+        left: 40% !important;
+    }
+
+}
+
+
+
+
+
+
+@media screen and (max-width: 959px) {
+    .hero-section::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh !important;
+        background-color: rgba(15, 15, 15, 0.7);
+        pointer-events: none;
+    }
+
+    .hero-section-text {
+        position: relative;
+        z-index: 1;
+    }
+}
