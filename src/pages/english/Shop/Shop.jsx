@@ -7,15 +7,15 @@ import {
   TabPanel,
   Button,
 } from "@material-tailwind/react";
-import AppLayout from "../../components/AppLayout/AppLayout";
-import SectionHeading from "../../components/SectionHeading";
-import IMAGES from "../../assets/images";
+import AppLayout from "../../../components/AppLayout/AppLayout";
+import SectionHeading from "../../../components/SectionHeading";
+import IMAGES from "../../../assets/images";
 import { FaCartPlus } from "react-icons/fa"
 
 export default function Shop() {
   const data = [
     {
-      label: "Personalized Mask Box",
+      label: "Personalized Mask Mail",
       value: "personalized",
       items: [
         {
@@ -78,7 +78,7 @@ export default function Shop() {
       ],
     },
     {
-      label: "Pre-Curated Mask Box",
+      label: "Pre-Curated Mask Mail",
       value: "precurated",
       items: [
         {

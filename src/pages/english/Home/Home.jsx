@@ -1,9 +1,9 @@
 import React from 'react'
-import AppLayout from "../../components/AppLayout/AppLayout"
+import AppLayout from "../../../components/AppLayout/AppLayout";
 import { Button } from '@material-tailwind/react'
-import IMAGES from '../../assets/images'
-import SectionHeading from '../../components/SectionHeading'
-import GiftSlider from '../../../src/components/Slider/GiftSlider'
+import IMAGES from '../../../assets/images'
+import SectionHeading from '../../../components/SectionHeading'
+import GiftSlider from '../../../../src/components/Slider/GiftSlider'
 
 const Home = () => {
 
@@ -36,7 +36,7 @@ const Home = () => {
         <img className='absolute opacity-50 bottom-20 left-24 w-36' src={IMAGES.STAR_STICKER} alt="" />
         <img className='absolute opacity-50 top-2/5 left-1/2 w-36' src={IMAGES.STAR_STICKER} alt="" />
 
-        <SectionHeading textColor="text-[#74322c]" title={"Unveil the Perfect Facial Box for You"} />
+        <SectionHeading textColor="text-[#74322c]" title={"Unveil the Perfect Facial Mail for You"} />
 
         <div className="w-full lg:w-5/12 px-6 md:px-4 ml-auto mr-auto text-center md:text-left">
           <img className='w-full rounded' src={IMAGES.FEATURE_BG} alt="" />
@@ -138,16 +138,16 @@ const Home = () => {
                 <h2 className='text-[#74322c] sm:text-2xl text-xl sm:text-3xl'>02</h2>
               </span>
               <img className='mb-3 sm:w-12 w-10' src={IMAGES.WORK_ICON_2} alt="" />
-              <h3 className='sm:text-xl text-lg  mb-4'>Get Personalized Mask Box</h3>
+              <h3 className='sm:text-xl text-lg  mb-4'>Get Personalized Mask Mail</h3>
               <p className='sm:text-base text-xs mb-6'>Curated by our Skincare Experts uniquely for your skin, targeting your skin goals.</p>
-              <Button size='sm' color='white' variant="gradient">Personalize Your Box</Button>
+              <Button size='sm' color='white' variant="gradient">Personalize Your Mail</Button>
             </div>
             <div className='rounded-full shadow-xl text-white work-item relative sm:w-80 sm:h-80 w-72 h-72  bg-[#74322c] p-6 flex flex-col items-center justify-center'>
               <span className='absolute w-2/5 rounded -top-2 shadow bg-[#fae3d1]'>
                 <h2 className='text-[#74322c] sm:text-2xl text-xl sm:text-3xl'>03</h2>
               </span>
               <img className='mb-3 sm:w-12 w-10' src={IMAGES.WORK_ICON_3} alt="" />
-              <h3 className='sm:text-xl text-lg  mb-4'>Receive Your Box</h3>
+              <h3 className='sm:text-xl text-lg  mb-4'>Receive Your Mail</h3>
               <p className='sm:text-base text-xs mb-6'>Delivered to your doorstep each month. Cancel or Skip anytime, 100% hassle-free.</p>
               <Button size='sm' color='white' variant="gradient">get started</Button>
             </div>
@@ -158,11 +158,11 @@ const Home = () => {
 
       {/* Stats Section*/}
 
-      <section className="py-12 relative md:py-16 h-96 bg-[#e78956] text-white">
+      <section className="py-6 relative md:py-16 lg:h-96 bg-[#e78956] text-white">
         <img className='rotate-45 absolute top-2/5 opacity-10 right-16 w-72' src={IMAGES.COOKIE_STICKER} alt="" />
         <SectionHeading textColor="text-white" title="Glow Verse in Numbers" />
-        <div className="py-1 md:mx-28 mx-2 mt-16">
-          <div className="grid lg:grid-cols-3 text-center flex items-center">
+        <div className="py-1 md:mx-28 mx-2 md:mt-16">
+          <div className="grid md:grid-cols-3 sm:grid-cols-2 text-center flex items-center">
 
             <div className="flex flex-col items-center justify-center py-8">
               <h1 className="font-bold text-5xl mb-2">1492</h1>

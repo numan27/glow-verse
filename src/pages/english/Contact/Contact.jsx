@@ -5,8 +5,8 @@ import {
   Button,
   Textarea,
 } from "@material-tailwind/react";
-import AppLayout from "../../components/AppLayout/AppLayout"
-import SectionHeading from "../../components/SectionHeading"
+import AppLayout from "../../../components/AppLayout/AppLayout";
+import SectionHeading from "../../../components/SectionHeading"
 
 export default function Contact() {
   return (

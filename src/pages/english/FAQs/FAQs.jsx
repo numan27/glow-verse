@@ -4,8 +4,8 @@ import {
   AccordionHeader,
   AccordionBody,
 } from "@material-tailwind/react";
-import AppLayout from "../../components/AppLayout/AppLayout";
-import SectionHeading from "../../components/SectionHeading";
+import AppLayout from "../../../components/AppLayout/AppLayout";
+import SectionHeading from "../../../components/SectionHeading";
 import FAQ_LIST from "./FAQsList";
 
 function Icon({ id, open }) {

@@ -16,7 +16,6 @@ import { BsBagHeart } from "react-icons/bs"
 
 export default function Header() {
   const location = useLocation();
-
   const [openNav, setOpenNav] = React.useState(false);
 
   const [openTop, setOpenTop] = React.useState(false);
@@ -32,29 +31,29 @@ export default function Header() {
 
   const navList = (
     <ul className="mb-4 mt-2 flex flex-col items-center gap-2 lg:mb-0 lg:mt-0 lg:flex-row lg:items-center lg:gap-6">
-      <li>
-        <NavLink exact to="/" className="flex items-center navLink p-1 font-black touppercase tracking-wider" activeClassName="active">
-          Home
+        <li>
+        <NavLink to="/arabic-contact" className="flex items-center navLink p-1 font-black touppercase tracking-wider" activeClassName="active">
+        اتصال
         </NavLink>
       </li>
       <li>
-        <NavLink to="/quiz" className="flex items-center navLink p-1 font-black touppercase tracking-wider" activeClassName="active">
-          Skin Quiz
+        <NavLink to="/arabic-faq" className="flex items-center navLink p-1 font-black touppercase tracking-wider" activeClassName="active">
+        أسئلة وأجوبة
         </NavLink>
       </li>
       <li>
-        <NavLink to="/shop" className="flex items-center navLink p-1 font-black touppercase tracking-wider" activeClassName="active">
-          Shop
+        <NavLink to="/arabic-shop" className="flex items-center navLink p-1 font-black touppercase tracking-wider" activeClassName="active">
+        محل
         </NavLink>
       </li>
       <li>
-        <NavLink to="/faq" className="flex items-center navLink p-1 font-black touppercase tracking-wider" activeClassName="active">
-          FAQs
+        <NavLink to="/arabic-quiz" className="flex items-center navLink p-1 font-black touppercase tracking-wider" activeClassName="active">
+        مسابقة الجلد
         </NavLink>
       </li>
       <li>
-        <NavLink to="/contact" className="flex items-center navLink p-1 font-black touppercase tracking-wider" activeClassName="active">
-          Contact
+        <NavLink exact to="/arabic-home" className="flex items-center navLink p-1 font-black touppercase tracking-wider" activeClassName="active">
+        بيت
         </NavLink>
       </li>
     </ul>
@@ -95,31 +94,37 @@ export default function Header() {
       <div className="bg-[#ee8bb9] shadow-2xl nav-bar">
         <Navbar className="bg-[#ee8bb9] border-0 shadow-none mx-auto max-w-screen-xl py-1 px-4 lg:px-8">
           <div className="container mx-auto flex items-center justify-between text-blue-gray-900">
-            <Link
-              to="/"
-              className="cursor-pointer"
-            >
-              <img src={IMAGES.LOGO} className="logo md:w-40 w-28" alt="logo" />
-            </Link>
-            <div className="hidden lg:block">{navList}</div>
 
             {/* Nav icon buttons */}
             <div className="lg:static fixed icons-button flex items-center">
-              <IconButton variant="text" className="text-white hover:text-[#74322c]"
-                onClick={openDrawerTop}
-              >
-                <GoSearch className="text-2xl" />
-              </IconButton>
-              <IconButton variant="text" className="text-white hover:text-[#74322c]">
-                <BsBagHeart className="text-2xl" />
-              </IconButton>
+
+
               <Link to={getCurrentPageLink()}>
                 <IconButton variant="text" className="text-white language">
                   <img src={IMAGES.LANGUAGE_ICON} className="language-icon" alt="language" />
                 </IconButton>
               </Link>
-            </div>
 
+
+              <IconButton variant="text" className="text-white hover:text-[#74322c]">
+                <BsBagHeart className="text-2xl" />
+              </IconButton>
+
+              <IconButton variant="text" className="text-white hover:text-[#74322c]"
+                onClick={openDrawerTop}
+              >
+                <GoSearch className="text-2xl" />
+              </IconButton>
+
+            </div>
+            <div className="hidden lg:block">{navList}</div>
+
+            <Link
+              to="/arabic-home"
+              className="cursor-pointer"
+            >
+              <img src={IMAGES.LOGO} className="logo md:w-40 w-28" alt="logo" />
+            </Link>
             <IconButton
               variant="text"
               className="ml-auto h-6 w-6 text-inherit hover:bg-transparent focus:bg-transparent active:bg-transparent lg:hidden"

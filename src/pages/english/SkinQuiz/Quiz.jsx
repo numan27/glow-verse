@@ -4,10 +4,10 @@ import { useTheme } from '@mui/material/styles';
 import MobileStepper from '@mui/material/MobileStepper';
 import { BsArrowRight, BsArrowLeft } from 'react-icons/bs';
 import TextField from '@mui/material/TextField';
-import AppLayout from "../../components/AppLayout/AppLayout"
+import AppLayout from "../../../components/AppLayout/AppLayout";
 import { Button } from '@material-tailwind/react';
 import ImageSelector from './ImageSelector';
-import IMAGES from '../../assets/images';
+import IMAGES from '../../../assets/images';
 
 const imagesSet1 = [
   { path: IMAGES.SKIN_TONE_1, label: 'Image 1' },

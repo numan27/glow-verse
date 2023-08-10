@@ -9,47 +9,47 @@ export default function GiftSlider() {
 
   const giftItems = [
     {
-      name: "Gift Item 1",
+      name: "عنصر هدية 1",
       img: IMAGES.SLIDER_1
     },
     {
-      name: "Gift Item 2",
+      name: "عنصر هدية 2",
       img: IMAGES.SLIDER_2
     },
     {
-      name: "Gift Item 3",
+      name: "عنصر هدية 3",
       img: IMAGES.SLIDER_3
     },
     {
-      name: "Gift Item 4",
+      name: "عنصر هدية 4",
       img: IMAGES.SLIDER_4
     },
     {
-      name: "Gift Item 5",
+      name: "عنصر هدية 5",
       img: IMAGES.SLIDER_5
     },
     {
-      name: "Gift Item 6",
+      name: "عنصر هدية 6",
       img: IMAGES.SLIDER_6
     },
     {
-      name: "Gift Item 7",
+      name: "عنصر هدية 7",
       img: IMAGES.SLIDER_7
     },
     {
-      name: "Gift Item 8",
+      name: "عنصر هدية 8",
       img: IMAGES.SLIDER_8
     },
     {
-      name: "Gift Item 9",
+      name: "عنصر هدية 9",
       img: IMAGES.SLIDER_9
     },
     {
-      name: "Gift Item 10",
+      name: "عنصر هدية 10",
       img: IMAGES.SLIDER_10
     },
     {
-      name: "Gift Item 11",
+      name: "عنصر هدية 11",
       img: IMAGES.SLIDER_11
     },
   ]
