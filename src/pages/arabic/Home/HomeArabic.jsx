@@ -5,6 +5,9 @@ import IMAGES from '../../../assets/images'
 import SectionHeading from "../../../components/SectionHeading"
 import GiftSliderArabic from '../../../components/Slider/GiftSliderArabic'
 import { Link } from 'react-router-dom'
+import blogData from './BlogData';
+import BlogCard from "./BlogCard"
+
 
 const Home = () => {
 
@@ -198,6 +201,24 @@ const Home = () => {
           <img className='absolute -rotate-45 opacity-50 -top-32 left-16 w-36' src={IMAGES.FRESH_STICKER} alt="" />
           <img className='absolute rotate-45 opacity-30 -bottom-8 right-16 w-24' src={IMAGES.COOKIE_STICKER} alt="" />
           <GiftSliderArabic />
+        </div>
+      </section>
+
+      {/* Blog */}
+
+      <section className="py-10">
+        <div className="container mx-auto px-3 md:px-0">
+          <SectionHeading textColor="text-[#74322c]" title="أحدث المدونات" />
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {blogData.map((blog, index) => (
+              <BlogCard
+                key={index}
+                title={blog.title}
+                image={blog.image}
+                excerpt={blog.excerpt}
+              />
+            ))}
+          </div>
         </div>
       </section>
 

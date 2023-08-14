@@ -6,6 +6,39 @@ import { MdMail } from "react-icons/md"
 import { RiWhatsappFill } from "react-icons/ri"
 import { Link } from 'react-router-dom'
 
+const socialIcons = [
+  {
+    icon: FaFacebookF,
+    title: 'Facebook',
+    link: 'https://www.facebook.com/',
+    color: '[#3b5998]',
+  },
+  {
+    icon: FaInstagram,
+    title: 'Instagram',
+    link: 'https://www.instagram.com/',
+    color: '[#DB0077]',
+  },
+  {
+    icon: FaTiktok,
+    title: 'TikTok',
+    link: 'https://www.tiktok.com/',
+    color: 'black',
+  },
+  {
+    icon: FaYoutube,
+    title: 'Youtube',
+    link: 'https://www.youtube.com/',
+    color: '[#CD201F]',
+  },
+  {
+    icon: FaTwitter,
+    title: 'Twitter',
+    link: 'https://twitter.com/',
+    color: '[#00acee]',
+  },
+];
+
 const Footer = () => {
   return (
     <footer className="bg-[#ee8bb9] pt-8 pb-2 shadow-lg">
@@ -62,59 +95,41 @@ const Footer = () => {
 
           <div className='lg:w-1/4 w-full text-center lg:text-left flex justify-center'>
             <ul className='lg:mt-12 mt-6 text-white'>
-              <li className='mb-2 flex items-center gap-2'> <span><RiWhatsappFill className='text-xl' /></span> 
-              +966 56 072 0308</li>
+              <li className='mb-2 flex items-center gap-2'> <span><RiWhatsappFill className='text-xl' /></span>
+                +966 56 072 0308</li>
 
-              <li className='mb-2 flex items-center gap-2'> <span><FaHome className='text-xl' /></span> 
-              +966 56 072 0308</li>
+              <li className='mb-2 flex items-center gap-2'> <span><FaHome className='text-xl' /></span>
+                +966 56 072 0308</li>
 
-              <li className='mb-2 flex items-center gap-2'> <span><FaPhone className='text-xl' /></span> 
-              P.O. Box: 9057, Jeddah, Saudi Arabia</li>
+              <li className='mb-2 flex items-center gap-2'> <span><FaPhone className='text-xl' /></span>
+                P.O. Box: 9057, Jeddah, Saudi Arabia</li>
 
-              <li className='mb-2 flex items-center gap-2'> <span><MdMail className='text-xl' /></span> 
-              info@glowverse.com</li>
+              <li className='mb-2 flex items-center gap-2'> <span><MdMail className='text-xl' /></span>
+                info@glowverse.com</li>
             </ul>
           </div>
         </div>
 
         {/* Social - new row */}
 
-        <div className="flex flex-wrap sm:justify-between justify-center items-center lg:px-32 px-0">
-
-          <a href="https://www.facebook.com/" className='flex w-1/2 sm:w-fit items-center sm:justify-start justify-center transition duration-300 sm:mb-0 mb-3 ease-in-out group cursor-pointer'>
-            <span className="text-white transition duration-300 ease-in-out group-hover:text-[#3b5998] mx-2">
-              <FaFacebookF className='text-3xl' />
-            </span>
-            <span className='text-[#fae3d1] transition duration-300 ease-in-out group-hover:text-white sm:text-xl text-base font-bold'>Facebook</span>
-          </a>
-
-          <a href="https://www.instagram.com/" className='flex w-1/2 sm:w-fit items-center sm:justify-start justify-center transition duration-300 sm:mb-0 mb-3 ease-in-out group cursor-pointer'>
-            <span className="text-white transition duration-300 ease-in-out group-hover:text-pink-500 mx-2">
-              <FaInstagram className='text-3xl' />
-            </span>
-            <span className='text-[#fae3d1] transition duration-300 ease-in-out group-hover:text-white sm:text-xl text-base  font-bold'>Instagram</span>
-          </a>
-
-          <a href="https://www.tiktok.com/" className='flex w-1/2 sm:w-fit items-center sm:justify-start justify-center transition duration-300 sm:mb-0 mb-3 ease-in-out group cursor-pointer'>
-            <span className="text-white transition duration-300 ease-in-out group-hover:text-black mx-2">
-              <FaTiktok className='text-3xl' />
-            </span>
-            <span className='text-[#fae3d1] transition duration-300 ease-in-out group-hover:text-white sm:text-xl text-base  font-bold'>TikTok</span>
-          </a>
-
-          <a href="https://www.youtube.com/"  className='flex w-1/2 sm:w-fit items-center sm:justify-start  justify-center transition duration-300 sm:mb-0 mb-3 ease-in-out group cursor-pointer'>
-            <span className="text-white transition duration-300 ease-in-out group-hover:text-[#CD201F] mx-2">
-              <FaYoutube className='text-3xl' />
-            </span>
-            <span className='text-[#fae3d1] transition duration-300 ease-in-out group-hover:text-white sm:text-xl text-base  font-bold'>Youtube</span>
-          </a>
-
-          <a href="https://twitter.com/" className='flex w-1/2 sm:w-fit items-center sm:justify-start justify-center transition duration-300 ease-in-out sm:mb-0 mb-3 group cursor-pointer'>
-            <span className="text-white transition duration-300 ease-in-out group-hover:text-[#00acee] mx-2">
-              <FaTwitter className='text-3xl' />
-            </span>
-            <span className='text-[#fae3d1] transition duration-300 ease-in-out group-hover:text-white sm:text-xl text-base font-bold'>Twitter</span>
-          </a>
+        <div className="grid xl:grid-cols-5 lg:grid-cols-4 md:grid-cols-3 grid-cols-2 sm:gap-10 lg:px-32 px-0">
+          {socialIcons.map((socialIcon, index) => (
+            <div className="flex justify-center items-center" key={index}>
+              <a
+                href={socialIcon.link}
+                className="flex w-16 items-center sm:justify-start justify-start transition duration-300 sm:mb-0 mb-3 ease-in-out group cursor-pointer"
+              >
+                <span
+                  className={`text-white w-1/2 transition duration-300 ease-in-out group-hover:text-${socialIcon.color} mx-2`}
+                >
+                  {React.createElement(socialIcon.icon, { className: 'text-3xl' })}
+                </span>
+                <span className={`text-[#fae3d1] transition duration-300 ease-in-out group-hover:text-white sm:text-xl text-base font-bold text-center`}>
+                  {socialIcon.title}
+                </span>
+              </a>
+            </div>
+          ))}
         </div>
       </div>
 

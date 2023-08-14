@@ -1,17 +1,51 @@
 import React from 'react'
 import IMAGES from '../../assets/images'
 import { FaFacebookF, FaYoutube, FaTiktok, FaTwitter, FaInstagram, FaHome, FaPhone } from "react-icons/fa"
-import { BsArrowRight } from "react-icons/bs"
+import { BsArrowLeft } from "react-icons/bs"
 import { MdMail } from "react-icons/md"
 import { RiWhatsappFill } from "react-icons/ri"
 import { Link } from 'react-router-dom'
+
+const socialIcons = [
+  {
+    icon: FaFacebookF,
+    title: 'فيسبوك',
+    link: 'https://www.facebook.com/',
+    color: '[#3b5998]',
+  },
+  {
+    icon: FaInstagram,
+    title: 'إنستجرام',
+    link: 'https://www.instagram.com/',
+    color: '[#DB0077]',
+  },
+  {
+    icon: FaTiktok,
+    title: 'تيك توك',
+    link: 'https://www.tiktok.com/',
+    color: 'black',
+  },
+  {
+    icon: FaYoutube,
+    title: 'يوتيوب',
+    link: 'https://www.youtube.com/',
+    color: '[#CD201F]',
+  },
+  {
+    icon: FaTwitter,
+    title: 'تويتر',
+    link: 'https://twitter.com/',
+    color: '[#00acee]',
+  },
+];
+
 
 const Footer = () => {
   return (
     <footer className="bg-[#ee8bb9] pt-8 pb-2 shadow-lg">
       <div className="container mx-auto px-4">
 
-        <div className="flex items-center justify-between flex-wrap mb-8 mb-12">
+        <div className="flex items-center lg:flex-row flex-col-reverse justify-between flex-wrap mb-8 mb-12">
 
           {/* Contact details */}
 
@@ -24,7 +58,7 @@ const Footer = () => {
                 +966 56 072 0308</li>
 
               <li className='mb-2 flex items-center gap-2'> <span><FaPhone className='text-xl' /></span>
-              ص. ب: 9057 جدة ، المملكة العربية السعودية</li>
+                ص. ب: 9057 جدة ، المملكة العربية السعودية</li>
 
               <li className='mb-2 flex items-center gap-2'> <span><MdMail className='text-xl' /></span>
                 info@glowverse.com</li>
@@ -36,14 +70,17 @@ const Footer = () => {
             <h2 className='text-white text-xl md:mb-8 mb-4 uppercase text-semibold'>الروابط</h2>
             <ul>
               <li className='text-[#74322c] transition duration-300 ease-in-out hover:text-white mb-1.5 hover:translate-x-1'>
-                <Link className='flex items-center'><span><BsArrowRight className='mr-2' /> </span> اتصال</Link>
+                <Link className='flex items-center justify-end'> اتصال<span><BsArrowLeft className='ml-2' /> </span></Link>
               </li>
               <li className='text-[#74322c] transition duration-300 ease-in-out hover:text-white mb-1.5 hover:translate-x-1'>
-                <Link className='flex items-center'><span><BsArrowRight className='mr-2' /> </span> محل</Link>
+                <Link className='flex items-center justify-end'> محل
+                  <span><BsArrowLeft className='ml-2' /> </span>
+                </Link>
               </li>
               <li className='text-[#74322c] transition duration-300 ease-in-out hover:text-white mb-1.5 hover:translate-x-1'>
-                <Link className='flex items-center'><span><BsArrowRight className='mr-2' /> </span>
-                يدعم
+                <Link className='flex items-center justify-end'>
+                  يدعم
+                  <span><BsArrowLeft className='ml-2' /> </span>
                 </Link>
               </li>
             </ul>
@@ -55,16 +92,21 @@ const Footer = () => {
             <h2 className='text-white text-xl md:mb-8 mb-4 uppercase text-semibold'>يدعم</h2>
             <ul>
               <li className='text-[#74322c] transition duration-300 ease-in-out hover:text-white mb-1.5 hover:translate-x-1'>
-                <Link className='flex items-center'><span><BsArrowRight className='mr-2' /> </span> مسابقة الجلد</Link>
-              </li>
-              <li className='text-[#74322c] transition duration-300 ease-in-out hover:text-white mb-1.5 hover:translate-x-1'>
-                <Link className='flex items-center'><span><BsArrowRight className='mr-2' /> </span>
-                أسئلة وأجوبة
+                <Link className='flex items-center justify-end'>
+                  مسابقة الجلد
+                  <span><BsArrowLeft className='ml-2' /> </span>
                 </Link>
               </li>
               <li className='text-[#74322c] transition duration-300 ease-in-out hover:text-white mb-1.5 hover:translate-x-1'>
-                <Link className='flex items-center'><span><BsArrowRight className='mr-2' /> </span>
-                يدعم
+                <Link className='flex items-center justify-end'>
+                  أسئلة وأجوبة
+                  <span><BsArrowLeft className='ml-2' /> </span>
+                </Link>
+              </li>
+              <li className='text-[#74322c] transition duration-300 ease-in-out hover:text-white mb-1.5 hover:translate-x-1'>
+                <Link className='flex items-center justify-end'>
+                  يدعم
+                  <span><BsArrowLeft className='ml-2' /> </span>
                 </Link>
               </li>
             </ul>
@@ -79,42 +121,24 @@ const Footer = () => {
 
         {/* Social - new row */}
 
-        <div className="flex flex-wrap sm:justify-between justify-center items-center lg:px-32 px-0">
-
-          <a href="https://www.facebook.com/" className='flex w-1/2 sm:w-fit items-center sm:justify-start justify-center transition duration-300 sm:mb-0 mb-3 ease-in-out group cursor-pointer'>
-            <span className="text-white transition duration-300 ease-in-out group-hover:text-[#3b5998] mx-2">
-              <FaFacebookF className='text-3xl' />
-            </span>
-            <span className='text-[#fae3d1] transition duration-300 ease-in-out group-hover:text-white sm:text-xl text-base font-bold'>فيسبوك</span>
-          </a>
-
-          <a href="https://www.instagram.com/" className='flex w-1/2 sm:w-fit items-center sm:justify-start justify-center transition duration-300 sm:mb-0 mb-3 ease-in-out group cursor-pointer'>
-            <span className="text-white transition duration-300 ease-in-out group-hover:text-pink-500 mx-2">
-              <FaInstagram className='text-3xl' />
-            </span>
-            <span className='text-[#fae3d1] transition duration-300 ease-in-out group-hover:text-white sm:text-xl text-base  font-bold'>انستغرام</span>
-          </a>
-
-          <a href="https://www.tiktok.com/" className='flex w-1/2 sm:w-fit items-center sm:justify-start justify-center transition duration-300 sm:mb-0 mb-3 ease-in-out group cursor-pointer'>
-            <span className="text-white transition duration-300 ease-in-out group-hover:text-black mx-2">
-              <FaTiktok className='text-3xl' />
-            </span>
-            <span className='text-[#fae3d1] transition duration-300 ease-in-out group-hover:text-white sm:text-xl text-base  font-bold'>تيك توك</span>
-          </a>
-
-          <a href="https://www.youtube.com/" className='flex w-1/2 sm:w-fit items-center sm:justify-start  justify-center transition duration-300 sm:mb-0 mb-3 ease-in-out group cursor-pointer'>
-            <span className="text-white transition duration-300 ease-in-out group-hover:text-[#CD201F] mx-2">
-              <FaYoutube className='text-3xl' />
-            </span>
-            <span className='text-[#fae3d1] transition duration-300 ease-in-out group-hover:text-white sm:text-xl text-base  font-bold'>موقع</span>
-          </a>
-
-          <a href="https://twitter.com/" className='flex w-1/2 sm:w-fit items-center sm:justify-start justify-center transition duration-300 ease-in-out sm:mb-0 mb-3 group cursor-pointer'>
-            <span className="text-white transition duration-300 ease-in-out group-hover:text-[#00acee] mx-2">
-              <FaTwitter className='text-3xl' />
-            </span>
-            <span className='text-[#fae3d1] transition duration-300 ease-in-out group-hover:text-white sm:text-xl text-base font-bold'>تويتر</span>
-          </a>
+        <div className="grid xl:grid-cols-5 lg:grid-cols-4 md:grid-cols-3 grid-cols-2 sm:gap-10 lg:px-32 px-0">
+          {socialIcons.map((socialIcon, index) => (
+            <div className="flex justify-center items-center" key={index}>
+              <a
+                href={socialIcon.link}
+                className="flex w-16 items-center sm:justify-start justify-start transition duration-300 sm:mb-0 mb-3 ease-in-out group cursor-pointer"
+              >
+                <span
+                  className={`text-white w-1/2 transition duration-300 ease-in-out group-hover:text-${socialIcon.color} mx-2`}
+                >
+                  {React.createElement(socialIcon.icon, { className: 'text-3xl' })}
+                </span>
+                <span className={`text-[#fae3d1] transition duration-300 ease-in-out group-hover:text-white sm:text-xl text-base font-bold text-center`}>
+                  {socialIcon.title}
+                </span>
+              </a>
+            </div>
+          ))}
         </div>
       </div>
 

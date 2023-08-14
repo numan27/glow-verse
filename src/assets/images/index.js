@@ -54,6 +54,12 @@ import shop10 from "./shop/shop-10.jpg"
 import shop11 from "./shop/shop-11.jpg"
 import shop12 from "./shop/shop-12.jpg"
 import contactBg from "./bg_2.jpeg"
+import blog1 from "./blog/blog-1.jpg";
+import blog2 from "./blog/blog-2.jpg";
+import blog3 from "./blog/blog-3.jpg";
+import blog4 from "./blog/blog-4.jpg";
+import blog5 from "./blog/blog-5.jpg";
+import blog6 from "./blog/blog-6.jpg";
 
 
 
@@ -114,6 +120,12 @@ SHOP_10: shop10,
 SHOP_11: shop11,
 SHOP_12: shop12,
 CONTACT_BG: contactBg,
+BLOG_1: blog1,
+BLOG_2: blog2,
+BLOG_3: blog3,
+BLOG_4: blog4,
+BLOG_5: blog5,
+BLOG_6: blog6,
 
 }
 
